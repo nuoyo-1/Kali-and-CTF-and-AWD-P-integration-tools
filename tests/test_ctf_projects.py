@@ -67,7 +67,7 @@ class CtfProjectsTests(unittest.TestCase):
             root=Path(folder);one=root/'encrypted.zip';two=root/'plain.zip'
             one.write_bytes(b'fixture');two.write_bytes(b'fixture')
             values=validate(BY_ID['bkcrack-known'],dict(encrypted=str(one),plain=str(two),cipher_entry='folder/file name.txt',plain_entry='plain.txt'))
-            self.assertEqual(command(BY_ID['bkcrack-known'],values,root),['bkcrack','-C',str(one),'-c','folder/file name.txt','-P',str(two),'-p','plain.txt'])
+            self.assertEqual(command(BY_ID['bkcrack-known'],values,root),['bkcrack','-C',str(one.resolve()),'-c','folder/file name.txt','-P',str(two.resolve()),'-p','plain.txt'])
 
     def test_angr_settings_limits_and_optional_address(self):
         self.assertEqual(settings('0x401000','','32','yes'),(0x401000,None,32,True))
