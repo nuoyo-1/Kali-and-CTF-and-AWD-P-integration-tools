@@ -1,0 +1,11 @@
+* text=auto
+*.py text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.desktop text eol=lf
+# Preserve upstream snapshot bytes so recorded SHA-256 values stay valid.
+resources/upstream/** -text
+*.png -text
