@@ -1,0 +1,100 @@
+{
+  "collected": "2026-11-23T11:54:30.792140+00:00",
+  "projects": [
+    {
+      "id": "rsa",
+      "repo": "RsaCtfTool/RsaCtfTool",
+      "url": "https://github.com/RsaCtfTool/RsaCtfTool",
+      "commit": "86a9f77cd8271df5af5e0bd9b2b9bb20f312896b",
+      "archived": false,
+      "archive": "rsa-source.zip",
+      "sha256": "4df7ae7cc404650269be7ee9bce6b0121e1cfe458061e09bb2b480c6407cdb01",
+      "bytes": 4768303,
+      "pypi": "RsaCtfTool",
+      "version": "1.1",
+      "requires_python": ">=3.8,<3.9",
+      "distribution_source": "https://pypi.org/project/RsaCtfTool/",
+      "status": "collected"
+    },
+    {
+      "id": "xor",
+      "repo": "hellman/xortool",
+      "url": "https://github.com/hellman/xortool",
+      "commit": "9001046d50ab02be9748dd1321d17866bb91e5c4",
+      "archived": false,
+      "archive": "xor-source.zip",
+      "sha256": "255d9ec8e730c2c1f0312d2260edab88ba7b8242e9c4925df31b35d79f0d16cc",
+      "bytes": 159864,
+      "pypi": "xortool",
+      "version": "1.1.0",
+      "requires_python": "<4.0,>=3.6",
+      "distribution_source": "https://pypi.org/project/xortool/",
+      "status": "collected"
+    },
+    {
+      "id": "bkcrack",
+      "repo": "kimci86/bkcrack",
+      "url": "https://github.com/kimci86/bkcrack",
+      "commit": "980b9ad0d4689aacc6ac0dd19ee1bf739dfe3729",
+      "archived": false,
+      "archive": "bkcrack-source.zip",
+      "sha256": "6981af8ff204d06e2c3e3883b3dd3b997be7289d95da4642d26188ef580623b9",
+      "bytes": 159529,
+      "status": "collected"
+    },
+    {
+      "id": "angr",
+      "repo": "angr/angr",
+      "url": "https://github.com/angr/angr",
+      "commit": "80c962c99a8d487e75acdfba7a2bcf01a5abfb93",
+      "archived": false,
+      "archive": "angr-source.zip",
+      "sha256": "18f8a0b357b6ee0f9c685ee0873ecd11f8f6dc2728f6483e172f341a94008359",
+      "bytes": 5929007,
+      "pypi": "angr",
+      "version": "10.0.7",
+      "requires_python": ">=3.12",
+      "distribution_source": "https://pypi.org/project/angr/",
+      "status": "collected"
+    },
+    {
+      "id": "volatility",
+      "repo": "volatilityfoundation/volatility3",
+      "url": "https://github.com/volatilityfoundation/volatility3",
+      "commit": "46d73b64286e6e828903647cc3d284e80724421a",
+      "archived": false,
+      "archive": "volatility-source.zip",
+      "sha256": "1ee64efb90f3d8c060ed6fecb74be4de4309dc637216e0ba2fb65dc359d1937a",
+      "bytes": 1627370,
+      "pypi": "volatility3",
+      "version": "2.28.2",
+      "requires_python": ">=3.8.0",
+      "distribution_source": "https://pypi.org/project/volatility3/",
+      "status": "collected"
+    },
+    {
+      "id": "oletools",
+      "repo": "decalage2/oletools",
+      "url": "https://github.com/decalage2/oletools",
+      "commit": "ec10260989dbc48b9109e3d05d22beee19cf2333",
+      "archived": false,
+      "status": "collected"
+    },
+    {
+      "id": "ciphey",
+      "repo": "Ciphey/Ciphey",
+      "url": "https://github.com/Ciphey/Ciphey",
+      "commit": "c500baffc02b281669626356253bcc8861aeaae3",
+      "archived": false,
+      "status": "collected"
+    },
+    {
+      "id": "cyberchef",
+      "repo": "GCHQ/CyberChef",
+      "url": "https://github.com/GCHQ/CyberChef",
+      "commit": "f464d62c7c943cda9749a765932a7548ba9bfb16",
+      "archived": false,
+      "status": "collected"
+    }
+  ]
+}

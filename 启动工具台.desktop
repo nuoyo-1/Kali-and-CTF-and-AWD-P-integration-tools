@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Kali Deck 全工具工作台
+Comment=启动 Kali 中文 CTF 与 AWDplus 工具平台
+Exec=python3 -c "import sys,pathlib,urllib.parse,runpy; p=sys.argv[1]; p=urllib.parse.unquote(urllib.parse.urlsplit(p).path) if p.startswith('file:') else p; runpy.run_path(str(pathlib.Path(p).resolve().with_name('launcher.py')),run_name='__main__')" %k
+Icon=applications-development
+Terminal=false
+Categories=Development;Utility;
+StartupNotify=false

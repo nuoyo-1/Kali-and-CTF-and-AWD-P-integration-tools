@@ -1,0 +1,90 @@
+// Development-only end-to-end check via an isolated headless Chrome and native CDP.
+import {spawn} from 'node:child_process';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import assert from 'node:assert/strict';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const chrome=process.env.CHROME_PATH||['C:/Program Files/Google/Chrome/Application/chrome.exe','/usr/bin/chromium','/usr/bin/google-chrome','/usr/bin/chromium-browser'].find(p=>fs.existsSync(p));
+if(!chrome)throw new Error('Set CHROME_PATH to an installed Chromium/Chrome executable');
+const child=spawn(chrome,['--headless=new','--disable-gpu','--no-first-run','--no-default-browser-check','--remote-debugging-port=0','--user-data-dir='+path.join(root,'data','browser-check'),'about:blank'],{windowsHide:true,stdio:['ignore','ignore','pipe']});
+let ws;
+const errors=[];
+try{
+  let endpoint='';
+  child.stderr.on('data',chunk=>{const match=chunk.toString().match(/DevTools listening on (ws:\/\/\S+)/);if(match)endpoint=match[1];});
+  async function until(fn,seconds=15){const end=Date.now()+seconds*1000;while(Date.now()<end){const value=await fn();if(value)return value;await new Promise(r=>setTimeout(r,100));}console.error('Browser errors:',errors);if(ws?.readyState===1)console.error(await evaluate('JSON.stringify({url:location.href,state:document.readyState,toast:document.querySelector("#toast")?.textContent,count:document.querySelectorAll(".tool-card").length,scripts:[...document.scripts].map(s=>s.src)})'));throw new Error('Timed out waiting for browser state');}
+  await until(()=>endpoint);
+  const port=new URL(endpoint).port;
+  const tabs=await (await fetch('http://127.0.0.1:'+port+'/json/list')).json();
+  ws=new WebSocket(tabs.find(t=>t.type==='page').webSocketDebuggerUrl);
+  await new Promise((resolve,reject)=>{ws.addEventListener('open',resolve,{once:true});ws.addEventListener('error',reject,{once:true});});
+  let next=0;const requests=new Map();
+  ws.addEventListener('message',event=>{const msg=JSON.parse(event.data);if(msg.id){const request=requests.get(msg.id);if(!request)return;requests.delete(msg.id);clearTimeout(request.timer);msg.error?request.reject(new Error(JSON.stringify(msg.error))):request.resolve(msg.result);}else if(msg.method==='Runtime.exceptionThrown'){errors.push(msg.params.exceptionDetails.text+': '+(msg.params.exceptionDetails.exception?.description||''));}});
+  function call(method,params={}){return new Promise((resolve,reject)=>{const id=++next;const timer=setTimeout(()=>{requests.delete(id);reject(new Error('CDP timed out: '+method));},15000);requests.set(id,{resolve,reject,timer});ws.send(JSON.stringify({id,method,params}));});}
+  async function evaluate(expression){const result=await call('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true,userGesture:true});if(result.exceptionDetails)throw new Error(result.exceptionDetails.exception?.description||result.exceptionDetails.text);return result.result.value;}
+  await call('Runtime.enable');await call('Page.enable');
+  await call('Emulation.setDeviceMetricsOverride',{width:1440,height:1000,deviceScaleFactor:1,mobile:false});
+  await call('Page.navigate',{url:'http://127.0.0.1:8765'});
+  await until(()=>evaluate('typeof tools!=="undefined" && tools.length>0 && document.querySelectorAll("#tools-grid .tool-card").length === tools.length')); await until(()=>evaluate('document.querySelectorAll(".full-card").length === 781'));
+  await until(()=>evaluate('typeof beginnerTasks!=="undefined" && beginnerTasks.length>0 && document.querySelectorAll(".beginner-task").length===beginnerTasks.length'));
+  assert.equal(await evaluate('document.querySelector("#beginner-view").hidden'),false);
+  await new Promise(r=>setTimeout(r,400));
+  assert.equal(await evaluate('document.documentElement.scrollWidth<=innerWidth'),true,'Desktop overflow');
+  fs.mkdirSync(path.join(root,'docs'),{recursive:true});
+  const screenshot=await call('Page.captureScreenshot',{format:'png'});
+  fs.writeFileSync(path.join(root,'docs','preview.png'),Buffer.from(screenshot.data,'base64'));
+  await evaluate('document.querySelector("[data-beginner=start]").click()');
+  await until(()=>evaluate('document.querySelector("#beginner-dialog").open'));
+  await evaluate('document.querySelector("#beginner-continue").click()');
+  assert.equal(await evaluate('document.querySelector("#field-text").value'),"ZmxhZ3toZWxsb19jdGZfZGVja30=");
+  assert.equal(await evaluate('document.querySelector("#tool-dialog").open'),true);
+  await evaluate('document.querySelector("#field-text").value="ZmxhZ3ticm93c2VyLXRlc3R9"; document.querySelector("#tool-form").requestSubmit()');
+  await until(()=>evaluate('document.querySelector("#job-dialog").open && document.querySelector("#job-status").innerText.includes("已完成")'));
+  assert.match(await evaluate('document.querySelector("#job-log").textContent'),/flag\{browser-test\}/);
+  assert.ok(await evaluate('document.querySelectorAll("[data-download]").length>=3'));
+  await evaluate('document.querySelector("#job-dialog .close-dialog").click();document.querySelector("[data-view=tools]").click();document.querySelector("#search").value="基线";document.querySelector("#search").dispatchEvent(new Event("input"))');
+  assert.equal(await evaluate('document.querySelectorAll("#tools-grid .tool-card").length'),2);
+  await evaluate('document.querySelector("[data-tool=baseline]").click();document.querySelector("[data-folder]").click()');
+  // The Windows sandbox may not allow listing the user's home; use the known project directory.
+  await evaluate('browseFolder('+JSON.stringify(root)+')');
+  await until(()=>evaluate('document.querySelector("#folder-dialog").open'));
+  await evaluate('document.querySelector("#folder-select").click()');
+  assert.equal(await evaluate('document.querySelector("#field-directory").value'),root);
+  await evaluate('document.querySelector("#tool-dialog .close-dialog").click();document.querySelector("[data-view=catalog]").click()');
+  await until(()=>evaluate('document.querySelectorAll(".full-card").length===781'));
+  assert.ok(await evaluate('document.querySelectorAll("[data-full-group]").length>=26'));
+  assert.equal(await evaluate('[...document.querySelectorAll("#full-list .tool-identity")].map(x=>x.textContent).length===new Set([...document.querySelectorAll("#full-list .tool-identity")].map(x=>x.textContent)).size'),true);
+  assert.equal(await evaluate('document.querySelectorAll("[data-full-program]").length'),2740);
+  await evaluate('document.querySelector("#full-search").value="蓝牙";document.querySelector("#full-search").dispatchEvent(new Event("input"))');
+  assert.equal(await evaluate('document.querySelectorAll(".full-card").length'),10);
+  assert.match(await evaluate('document.querySelector("#full-list").textContent'),/蓝牙/);
+  await evaluate('document.querySelector("#full-search").value="aircrack-ng"; document.querySelector("#full-search").dispatchEvent(new Event("input")); document.querySelector("[data-full-program]").click()');
+  await until(()=>evaluate('document.querySelector("#program-dialog").open'));
+  assert.ok(await evaluate('document.querySelectorAll("#program-flag option").length>5'));
+  await evaluate('document.querySelector("#program-flag").selectedIndex=1;document.querySelector("#program-add").click()');
+  assert.equal(await evaluate('document.querySelectorAll(".option-row").length'),1);
+  await evaluate('document.querySelector("#program-dialog .close-dialog").click()');
+  await evaluate('document.querySelector("[data-view=featured]").click()');
+  await until(()=>evaluate('document.querySelectorAll(".featured-card").length===12'));
+  assert.equal(await evaluate('document.querySelector("#featured-view").hidden'),false);
+  assert.equal(await evaluate('[...document.querySelectorAll(".featured-card h3")].map(e=>e.textContent).length'),12);
+  await evaluate('document.querySelector("[data-tool=rsa-decrypt]").click()');
+  assert.equal(await evaluate('document.querySelectorAll("#tool-fields [type=file]").length'),2);
+  assert.match(await evaluate('document.querySelector("#dialog-guide").textContent'),/SageMath/);
+  await evaluate('document.querySelector("#tool-dialog .close-dialog").click();document.querySelector("#featured-category").value="forensics";document.querySelector("#featured-category").dispatchEvent(new Event("change"))');
+  assert.equal(await evaluate('document.querySelectorAll(".featured-card").length'),2);
+  await evaluate('document.querySelector("[data-view=sources]").click()');
+  await until(()=>evaluate('document.querySelectorAll("#sources-list .tool-card").length===20'));
+  assert.match(await evaluate('[...document.querySelectorAll("#sources-list .tool-card")].find(c=>c.querySelector("h3").textContent==="RsaCtfTool").textContent'),/已有 2 个专用执行功能/);
+  await evaluate('document.querySelector("[data-view=tools]").click();document.querySelector("#search").value="";document.querySelector("#search").dispatchEvent(new Event("input"))');
+  await call('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});
+  assert.equal(await evaluate('document.documentElement.scrollWidth<=innerWidth'),true,'Mobile overflow');
+  const mobile=await call('Page.captureScreenshot',{format:'png'});
+  fs.writeFileSync(path.join(root,'docs','preview-mobile.png'),Buffer.from(mobile.data,'base64'));
+  assert.deepEqual(errors,[],'Browser JavaScript errors');
+  console.log('PASS: desktop, mobile, decode execution, results, search, directory picker, 781-item catalog, 12 GitHub projects, RSA form, category filtering, 20 reference projects; no JavaScript exceptions.');
+}finally{
+  if(ws)ws.close();
+  child.kill();
+}

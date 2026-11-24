@@ -1,0 +1,371 @@
+{
+  "source": "https://kali.download/kali/dists/kali-rolling/main/binary-amd64/Packages.gz",
+  "collected": "2026-11-23T03:22:03.423540+00:00",
+  "architecture": "amd64",
+  "packages": {
+    "7zip": {
+      "Package": "7zip",
+      "Version": "26.06+dfsg-1",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://www.7-zip.org/",
+      "Installed-Size": "7542",
+      "component": "main"
+    },
+    "apktool": {
+      "Package": "apktool",
+      "Version": "2.7.0+dfsg-7.2",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://ibotpeaches.github.io/Apktool/",
+      "Installed-Size": "269",
+      "component": "main"
+    },
+    "audacity": {
+      "Package": "audacity",
+      "Version": "4.0.2+dfsg-1",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://www.audacityteam.org/",
+      "Installed-Size": "38801",
+      "component": "main"
+    },
+    "binutils": {
+      "Package": "binutils",
+      "Version": "2.47.50.20261021-1",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://www.gnu.org/software/binutils/",
+      "Installed-Size": "1132",
+      "component": "main"
+    },
+    "binwalk": {
+      "Package": "binwalk",
+      "Version": "2.4.3+dfsg1-3",
+      "Architecture": "all",
+      "Source": "",
+      "Homepage": "https://github.com/ReFirmLabs/binwalk",
+      "Installed-Size": "17",
+      "component": "main"
+    },
+    "burpsuite": {
+      "Package": "burpsuite",
+      "Version": "2026.10.1-0kali1",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://portswigger.net",
+      "Installed-Size": "361225",
+      "component": "main"
+    },
+    "curl": {
+      "Package": "curl",
+      "Version": "8.22.0-1",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://curl.se/",
+      "Installed-Size": "520",
+      "component": "main"
+    },
+    "ffuf": {
+      "Package": "ffuf",
+      "Version": "2.3.0-1",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://github.com/ffuf/ffuf",
+      "Installed-Size": "10438",
+      "component": "main"
+    },
+    "file": {
+      "Package": "file",
+      "Version": "1:5.47-4",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://www.darwinsys.com/file/",
+      "Installed-Size": "80",
+      "component": "main"
+    },
+    "foremost": {
+      "Package": "foremost",
+      "Version": "1.5.7-12+b1",
+      "Architecture": "amd64",
+      "Source": "foremost (1.5.7-12)",
+      "Homepage": "https://sourceforge.net/projects/foremost/",
+      "Installed-Size": "101",
+      "component": "main"
+    },
+    "ghidra": {
+      "Package": "ghidra",
+      "Version": "12.2+ds-0kali2",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://github.com/NationalSecurityAgency/ghidra",
+      "Installed-Size": "848061",
+      "component": "main"
+    },
+    "gobuster": {
+      "Package": "gobuster",
+      "Version": "3.8.2-1",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://github.com/OJ/gobuster",
+      "Installed-Size": "9394",
+      "component": "main"
+    },
+    "hashcat": {
+      "Package": "hashcat",
+      "Version": "7.1.2+ds1-4",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://hashcat.net/hashcat/",
+      "Installed-Size": "122396",
+      "component": "main"
+    },
+    "hashid": {
+      "Package": "hashid",
+      "Version": "3.1.4-5",
+      "Architecture": "all",
+      "Source": "",
+      "Homepage": "https://psypanda.github.io/hashID/",
+      "Installed-Size": "83",
+      "component": "main"
+    },
+    "jadx": {
+      "Package": "jadx",
+      "Version": "1.5.6-0kali1",
+      "Architecture": "all",
+      "Source": "",
+      "Homepage": "https://github.com/skylot/jadx",
+      "Installed-Size": "76422",
+      "component": "main"
+    },
+    "john": {
+      "Package": "john",
+      "Version": "1.9.0-Jumbo-1+git20261011-0kali1",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://github.com/openwall/john",
+      "Installed-Size": "90057",
+      "component": "main"
+    },
+    "libimage-exiftool-perl": {
+      "Package": "libimage-exiftool-perl",
+      "Version": "13.55+dfsg-1",
+      "Architecture": "all",
+      "Source": "",
+      "Homepage": "https://exiftool.org/",
+      "Installed-Size": "29185",
+      "component": "main"
+    },
+    "nmap": {
+      "Package": "nmap",
+      "Version": "7.991+dfsg-1kali1",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://nmap.org/",
+      "Installed-Size": "4990",
+      "component": "main"
+    },
+    "openssl": {
+      "Package": "openssl",
+      "Version": "3.6.5-1",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://openssl-library.org",
+      "Installed-Size": "2564",
+      "component": "main"
+    },
+    "pngcheck": {
+      "Package": "pngcheck",
+      "Version": "4.0.1-1",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://github.com/pnggroup/pngcheck",
+      "Installed-Size": "175",
+      "component": "main"
+    },
+    "poppler-utils": {
+      "Package": "poppler-utils",
+      "Version": "26.07.0-4",
+      "Architecture": "amd64",
+      "Source": "poppler",
+      "Homepage": "https://poppler.freedesktop.org/",
+      "Installed-Size": "804",
+      "component": "main"
+    },
+    "python3-pwntools": {
+      "Package": "python3-pwntools",
+      "Version": "4.15.0-1",
+      "Architecture": "all",
+      "Source": "pwntools",
+      "Homepage": "https://pwntools.com",
+      "Installed-Size": "39832",
+      "component": "main"
+    },
+    "python3-ropgadget": {
+      "Package": "python3-ropgadget",
+      "Version": "7.7+dfsg-1",
+      "Architecture": "all",
+      "Source": "ropgadget",
+      "Homepage": "https://shell-storm.org/project/ROPgadget/",
+      "Installed-Size": "170",
+      "component": "main"
+    },
+    "radare2": {
+      "Package": "radare2",
+      "Version": "6.0.4+dfsg-1",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://www.radare.org",
+      "Installed-Size": "3673",
+      "component": "main"
+    },
+    "rizin-cutter": {
+      "Package": "rizin-cutter",
+      "Version": "2.5.0-0kali1+b1",
+      "Architecture": "amd64",
+      "Source": "rizin-cutter (2.5.0-0kali1)",
+      "Homepage": "https://cutter.re",
+      "Installed-Size": "10960",
+      "component": "main"
+    },
+    "ropper": {
+      "Package": "ropper",
+      "Version": "1.13.13-0kali1",
+      "Architecture": "all",
+      "Source": "",
+      "Homepage": "https://scoding.de/ropper/",
+      "Installed-Size": "454",
+      "component": "main"
+    },
+    "sleuthkit": {
+      "Package": "sleuthkit",
+      "Version": "4.14.0+dfsg-0kali1",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://www.sleuthkit.org/sleuthkit",
+      "Installed-Size": "1122",
+      "component": "main"
+    },
+    "sox": {
+      "Package": "sox",
+      "Version": "14.7.1.2+ds1-1",
+      "Architecture": "amd64",
+      "Source": "sox-ng",
+      "Homepage": "https://codeberg.org/sox_ng/sox_ng",
+      "Installed-Size": "230",
+      "component": "main"
+    },
+    "sqlmap": {
+      "Package": "sqlmap",
+      "Version": "1.10.10-1",
+      "Architecture": "all",
+      "Source": "",
+      "Homepage": "https://sqlmap.org/",
+      "Installed-Size": "13344",
+      "component": "main"
+    },
+    "sslscan": {
+      "Package": "sslscan",
+      "Version": "2.1.5-1",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://github.com/rbsec/sslscan",
+      "Installed-Size": "178",
+      "component": "main"
+    },
+    "steghide": {
+      "Package": "steghide",
+      "Version": "0.5.1+git20240220-3",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://steghide.sourceforge.net/",
+      "Installed-Size": "561",
+      "component": "main"
+    },
+    "stegseek": {
+      "Package": "stegseek",
+      "Version": "0.6+git20210910.ff677b9-2",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://github.com/RickdeJager/stegseek",
+      "Installed-Size": "366",
+      "component": "main"
+    },
+    "tshark": {
+      "Package": "tshark",
+      "Version": "4.6.9-1+b1",
+      "Architecture": "amd64",
+      "Source": "wireshark (4.6.9-1)",
+      "Homepage": "https://www.wireshark.org/",
+      "Installed-Size": "440",
+      "component": "main"
+    },
+    "upx-ucl": {
+      "Package": "upx-ucl",
+      "Version": "4.2.4-2",
+      "Architecture": "amd64",
+      "Source": "",
+      "Homepage": "https://upx.github.io/",
+      "Installed-Size": "2633",
+      "component": "main"
+    },
+    "whatweb": {
+      "Package": "whatweb",
+      "Version": "0.6.4-1",
+      "Architecture": "all",
+      "Source": "",
+      "Homepage": "https://github.com/urbanadventurer/WhatWeb",
+      "Installed-Size": "19213",
+      "component": "main"
+    },
+    "wireshark": {
+      "Package": "wireshark",
+      "Version": "4.6.9-1+b1",
+      "Architecture": "amd64",
+      "Source": "wireshark (4.6.9-1)",
+      "Homepage": "https://www.wireshark.org/",
+      "Installed-Size": "17267",
+      "component": "main"
+    },
+    "wireshark-common": {
+      "Package": "wireshark-common",
+      "Version": "4.6.9-1+b1",
+      "Architecture": "amd64",
+      "Source": "wireshark (4.6.9-1)",
+      "Homepage": "https://www.wireshark.org/",
+      "Installed-Size": "1966",
+      "component": "main"
+    },
+    "zaproxy": {
+      "Package": "zaproxy",
+      "Version": "2.17.0-0kali1",
+      "Architecture": "all",
+      "Source": "",
+      "Homepage": "https://github.com/zaproxy/zaproxy",
+      "Installed-Size": "273308",
+      "component": "main"
+    },
+    "zbar-tools": {
+      "Package": "zbar-tools",
+      "Version": "0.23.95-2",
+      "Architecture": "amd64",
+      "Source": "zbar",
+      "Homepage": "https://github.com/mchehab/zbar",
+      "Installed-Size": "102",
+      "component": "main"
+    },
+    "nikto": {
+      "Package": "nikto",
+      "Version": "1:2.6.1-0kali1",
+      "Architecture": "all",
+      "Source": "",
+      "Homepage": "https://github.com/sullo/nikto",
+      "Installed-Size": "2207",
+      "component": "non-free"
+    }
+  },
+  "missing": [
+    "outguess",
+    "zsteg"
+  ]
+}

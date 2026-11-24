@@ -1,0 +1,152 @@
+[
+  {
+    "id": "web",
+    "name": "网站与接口安全",
+    "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+    "count": 78
+  },
+  {
+    "id": "network",
+    "name": "网络发现与协议",
+    "description": "主机发现、端口、网络服务和协议分析",
+    "count": 96
+  },
+  {
+    "id": "dns",
+    "name": "域名与公开情报",
+    "description": "域名、子域名、公开账号与资产线索",
+    "count": 47
+  },
+  {
+    "id": "wifi",
+    "name": "无线网络安全",
+    "description": "Wi-Fi 接入点、认证和无线数据包",
+    "count": 34
+  },
+  {
+    "id": "bluetooth",
+    "name": "蓝牙安全",
+    "description": "蓝牙设备发现与协议分析",
+    "count": 10
+  },
+  {
+    "id": "radio",
+    "name": "射频与硬件",
+    "description": "软件无线电、RFID、串口和硬件调试",
+    "count": 24
+  },
+  {
+    "id": "ad",
+    "name": "内网与域安全",
+    "description": "Windows 域、权限、身份和内网协议",
+    "count": 42
+  },
+  {
+    "id": "password",
+    "name": "密码恢复与字典",
+    "description": "哈希识别、密码恢复和字典处理",
+    "count": 54
+  },
+  {
+    "id": "crypto",
+    "name": "加密与证书",
+    "description": "加密、密钥、证书和 TLS 检查",
+    "count": 17
+  },
+  {
+    "id": "exploit",
+    "name": "漏洞研究与验证",
+    "description": "漏洞资料、验证框架与研究工具",
+    "count": 70
+  },
+  {
+    "id": "remote",
+    "name": "远程连接与管理",
+    "description": "远程终端、文件传输和会话管理",
+    "count": 27
+  },
+  {
+    "id": "proxy",
+    "name": "代理与隧道",
+    "description": "流量代理、转发、VPN 和协议隧道",
+    "count": 41
+  },
+  {
+    "id": "reverse",
+    "name": "逆向与二进制",
+    "description": "反汇编、调试、反编译和二进制分析",
+    "count": 28
+  },
+  {
+    "id": "mobile",
+    "name": "安卓与移动分析",
+    "description": "APK、DEX、移动设备和应用分析",
+    "count": 10
+  },
+  {
+    "id": "forensics",
+    "name": "取证与日志",
+    "description": "内存、日志、文档、注册表和事件分析",
+    "count": 32
+  },
+  {
+    "id": "stego",
+    "name": "隐写与媒体",
+    "description": "图片、音频、隐写和媒体元数据",
+    "count": 10
+  },
+  {
+    "id": "disk",
+    "name": "磁盘与文件恢复",
+    "description": "镜像、分区、文件系统和数据恢复",
+    "count": 28
+  },
+  {
+    "id": "fuzz",
+    "name": "模糊测试与压力测试",
+    "description": "变异输入、协议测试与负载实验",
+    "count": 15
+  },
+  {
+    "id": "audit",
+    "name": "系统审计与防护",
+    "description": "配置审计、恶意特征检测和防护",
+    "count": 18
+  },
+  {
+    "id": "cloud",
+    "name": "云与容器安全",
+    "description": "云资源、容器、编排与供应链检查",
+    "count": 16
+  },
+  {
+    "id": "report",
+    "name": "报告与协作",
+    "description": "笔记、报告、项目和测试发现管理",
+    "count": 10
+  },
+  {
+    "id": "dev",
+    "name": "开发与运行环境",
+    "description": "编程语言、编译器、分析库和开发环境",
+    "count": 25
+  },
+  {
+    "id": "system",
+    "name": "系统与辅助组件",
+    "description": "系统命令、依赖库、桌面和辅助组件",
+    "count": 39
+  },
+  {
+    "id": "lab",
+    "name": "练习靶场与课程",
+    "description": "本地练习靶场、课程和测试资料",
+    "count": 4
+  },
+  {
+    "id": "automation",
+    "name": "自动化与外部助手",
+    "description": "自动化编排和第三方助手；平台本身不接入 AI",
+    "count": 6
+  }
+]

@@ -1,0 +1,12 @@
+/* Legible defaults for a task-oriented workbench, including category colours. */
+.nav-item{font-size:13px}.tab{font-size:12px}.tool-card h3{font-size:15px}
+.tool-card p{font-size:12px;color:#737c8c}.availability{font-size:11px}.card-run{font-size:12px}
+.subtitle{font-size:13px}.category-tag{font-size:9px}.form-field small{font-size:12px}
+.search input{font-size:12px}.guide,.notice{font-size:12px}.metrics p{font-size:10px}
+.overview p{font-size:12px}.secondary,.primary,.dark-button{font-size:12px}
+.catalog-link{font-size:12px}.help-step p{color:#707a8b}.file-row{font-size:12px}
+.error:empty{display:none}.upload-button{flex-shrink:0}
+#folder-list{margin-top:16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:340px;overflow:auto}
+#folder-list .catalog-link{text-align:left;overflow-wrap:anywhere;width:100%}
+#folder-path{overflow-wrap:anywhere}#tool-fields .file-controls .secondary{white-space:nowrap;flex-shrink:0}
+@media(max-width:650px){.nav-item{font-size:11px}.tool-card h3{font-size:13px}.tool-card p{font-size:11px}.card-run{font-size:10px}.availability{font-size:9px}.tabs{gap:15px}.tab{font-size:11px}.subtitle{font-size:12px}.overview p{font-size:11px}.metrics p{font-size:9px}#folder-list{grid-template-columns:1fr}}

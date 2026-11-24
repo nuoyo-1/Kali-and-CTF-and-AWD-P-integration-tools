@@ -1,0 +1,5738 @@
+{
+  "groups": {
+    "web": {
+      "name": "网站与接口安全",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查"
+    },
+    "network": {
+      "name": "网络发现与协议",
+      "description": "主机发现、端口、网络服务和协议分析"
+    },
+    "dns": {
+      "name": "域名与公开情报",
+      "description": "域名、子域名、公开账号与资产线索"
+    },
+    "wifi": {
+      "name": "无线网络安全",
+      "description": "Wi-Fi 接入点、认证和无线数据包"
+    },
+    "bluetooth": {
+      "name": "蓝牙安全",
+      "description": "蓝牙设备发现与协议分析"
+    },
+    "radio": {
+      "name": "射频与硬件",
+      "description": "软件无线电、RFID、串口和硬件调试"
+    },
+    "ad": {
+      "name": "内网与域安全",
+      "description": "Windows 域、权限、身份和内网协议"
+    },
+    "password": {
+      "name": "密码恢复与字典",
+      "description": "哈希识别、密码恢复和字典处理"
+    },
+    "crypto": {
+      "name": "加密与证书",
+      "description": "加密、密钥、证书和 TLS 检查"
+    },
+    "exploit": {
+      "name": "漏洞研究与验证",
+      "description": "漏洞资料、验证框架与研究工具"
+    },
+    "remote": {
+      "name": "远程连接与管理",
+      "description": "远程终端、文件传输和会话管理"
+    },
+    "proxy": {
+      "name": "代理与隧道",
+      "description": "流量代理、转发、VPN 和协议隧道"
+    },
+    "reverse": {
+      "name": "逆向与二进制",
+      "description": "反汇编、调试、反编译和二进制分析"
+    },
+    "mobile": {
+      "name": "安卓与移动分析",
+      "description": "APK、DEX、移动设备和应用分析"
+    },
+    "forensics": {
+      "name": "取证与日志",
+      "description": "内存、日志、文档、注册表和事件分析"
+    },
+    "stego": {
+      "name": "隐写与媒体",
+      "description": "图片、音频、隐写和媒体元数据"
+    },
+    "disk": {
+      "name": "磁盘与文件恢复",
+      "description": "镜像、分区、文件系统和数据恢复"
+    },
+    "fuzz": {
+      "name": "模糊测试与压力测试",
+      "description": "变异输入、协议测试与负载实验"
+    },
+    "audit": {
+      "name": "系统审计与防护",
+      "description": "配置审计、恶意特征检测和防护"
+    },
+    "cloud": {
+      "name": "云与容器安全",
+      "description": "云资源、容器、编排与供应链检查"
+    },
+    "report": {
+      "name": "报告与协作",
+      "description": "笔记、报告、项目和测试发现管理"
+    },
+    "dev": {
+      "name": "开发与运行环境",
+      "description": "编程语言、编译器、分析库和开发环境"
+    },
+    "system": {
+      "name": "系统与辅助组件",
+      "description": "系统命令、依赖库、桌面和辅助组件"
+    },
+    "lab": {
+      "name": "练习靶场与课程",
+      "description": "本地练习靶场、课程和测试资料"
+    },
+    "automation": {
+      "name": "自动化与外部助手",
+      "description": "自动化编排和第三方助手；平台本身不接入 AI"
+    }
+  },
+  "tools": {
+    "0trace": {
+      "group": "network",
+      "title": "路由路径追踪",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "7zip": {
+      "group": "system",
+      "title": "压缩文件管理",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "above": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "adaptixc2": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "aesfix": {
+      "group": "crypto",
+      "title": "加密与证书工具",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "aeskeyfind": {
+      "group": "crypto",
+      "title": "加密与证书工具",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "afflib": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "aflplusplus": {
+      "group": "fuzz",
+      "title": "模糊测试与压力测试工具",
+      "description": "变异输入、协议测试与负载实验",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "aircrack-ng": {
+      "group": "wifi",
+      "title": "无线抓包与密码分析套件",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "airgeddon": {
+      "group": "wifi",
+      "title": "无线网络测试套件",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "altdns": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "amap": {
+      "group": "network",
+      "title": "应用协议识别",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "amass": {
+      "group": "dns",
+      "title": "域名与资产发现",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "android-sdk-meta": {
+      "group": "mobile",
+      "title": "安卓与移动分析工具",
+      "description": "APK、DEX、移动设备和应用分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "apache-users": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "apache2": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "apktool": {
+      "group": "mobile",
+      "title": "安卓资源与代码解码",
+      "description": "APK、DEX、移动设备和应用分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "apple-bleee": {
+      "group": "bluetooth",
+      "title": "蓝牙安全工具",
+      "description": "蓝牙设备发现与协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "arjun": {
+      "group": "web",
+      "title": "HTTP 参数发现",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "armitage": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "arp-scan": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "arping": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "arpwatch": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "arsenal-ng": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "asleap": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "assetfinder": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "atftp": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "atomic-operator": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "autopsy": {
+      "group": "forensics",
+      "title": "数字取证工作台",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "autorecon": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "axel": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "azurehound": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "b374k": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "bed": {
+      "group": "fuzz",
+      "title": "模糊测试与压力测试工具",
+      "description": "变异输入、协议测试与负载实验",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "beef-xss": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "berate-ap": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "bettercap": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "bettercap-ui": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "bind9": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "bing-ip2hosts": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "binwalk": {
+      "group": "reverse",
+      "title": "固件与嵌入文件分析",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "binwalk3": {
+      "group": "reverse",
+      "title": "固件与嵌入文件分析（新版）",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "bloodhound": {
+      "group": "ad",
+      "title": "域关系与权限路径分析",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "bloodhound-ce-python": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "bloodhound.py": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "bloodyad": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "blue-hydra": {
+      "group": "bluetooth",
+      "title": "蓝牙安全工具",
+      "description": "蓝牙设备发现与协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "bluelog": {
+      "group": "bluetooth",
+      "title": "蓝牙设备记录",
+      "description": "蓝牙设备发现与协议分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "blueranger": {
+      "group": "bluetooth",
+      "title": "蓝牙安全工具",
+      "description": "蓝牙设备发现与协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "bluesnarfer": {
+      "group": "bluetooth",
+      "title": "蓝牙安全工具",
+      "description": "蓝牙设备发现与协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "bluez": {
+      "group": "bluetooth",
+      "title": "蓝牙协议与设备工具",
+      "description": "蓝牙设备发现与协议分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "bopscrk": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "bpf-linker": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "braa": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "bruteforce-luks": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "bruteforce-salted-openssl": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "bruteforce-wallet": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "bruteshark": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "brutespray": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "btscanner": {
+      "group": "bluetooth",
+      "title": "蓝牙设备发现",
+      "description": "蓝牙设备发现与协议分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "bulk-extractor": {
+      "group": "disk",
+      "title": "磁盘数据特征提取",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "bully": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "burpsuite": {
+      "group": "web",
+      "title": "网站抓包与请求测试",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "bytecode-viewer": {
+      "group": "mobile",
+      "title": "安卓与移动分析工具",
+      "description": "APK、DEX、移动设备和应用分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cabextract": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cadaver": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "caido": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "caido-cli": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "caldera": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "calico": {
+      "group": "cloud",
+      "title": "云与容器安全工具",
+      "description": "云资源、容器、编排与供应链检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "capstone": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ccrypt": {
+      "group": "crypto",
+      "title": "加密与证书工具",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "certgraph": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "certi": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "certipy-ad": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cewl": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "chainsaw": {
+      "group": "forensics",
+      "title": "事件日志检索与分析",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "changeme": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "chaosreader": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cherrytree": {
+      "group": "report",
+      "title": "层级笔记整理",
+      "description": "笔记、报告、项目和测试发现管理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "chirp": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "chisel": {
+      "group": "proxy",
+      "title": "网络隧道转发",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "chisel-common-binaries": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "chkrootkit": {
+      "group": "audit",
+      "title": "Rootkit 特征检查",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "chntpw": {
+      "group": "password",
+      "title": "离线账户与注册表编辑",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "chromium": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cifs-utils": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cilium-cli": {
+      "group": "cloud",
+      "title": "云与容器安全工具",
+      "description": "云资源、容器、编排与供应链检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ciphey": {
+      "group": "crypto",
+      "title": "加密与证书工具",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cisco-auditing-tool": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cisco-global-exploiter": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cisco-ocs": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cisco-torch": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cisco7crack": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "clamav": {
+      "group": "audit",
+      "title": "恶意文件扫描",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "cloud-enum": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cloudbrute": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cmospwd": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cmseek": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cntlm": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "code-oss": {
+      "group": "dev",
+      "title": "代码编辑器",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "coercer": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "colly": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "command-not-found": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "commix": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "copy-router-config": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cosign": {
+      "group": "crypto",
+      "title": "加密与证书工具",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "covenant-kbx": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cowpatty": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "crack": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "crackle": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "crackmapexec": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "creddump7": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cri-tools": {
+      "group": "cloud",
+      "title": "云与容器安全工具",
+      "description": "云资源、容器、编排与供应链检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "crlfuzz": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "crowbar": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "crunch": {
+      "group": "password",
+      "title": "字典生成",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "cryptcat": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cryptsetup": {
+      "group": "crypto",
+      "title": "加密与证书工具",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cryptsetup-nuke-password": {
+      "group": "crypto",
+      "title": "加密与证书工具",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cupid-wpa": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "curl": {
+      "group": "web",
+      "title": "网址请求与数据传输",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "cutecom": {
+      "group": "radio",
+      "title": "图形化串口终端",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "cutycapt": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "cymothoa": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dalfox": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "darkstat": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "davtest": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dbd": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dbeaver": {
+      "group": "system",
+      "title": "数据库图形管理",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "dc3dd": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dcfldd": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ddrescue": {
+      "group": "disk",
+      "title": "磁盘镜像与数据抢救",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "defectdojo": {
+      "group": "report",
+      "title": "安全发现管理",
+      "description": "笔记、报告、项目和测试发现管理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "detect-it-easy": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dex2jar": {
+      "group": "mobile",
+      "title": "安卓与移动分析工具",
+      "description": "APK、DEX、移动设备和应用分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dfdatetime": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dfvfs": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dfwinreg": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dhcpig": {
+      "group": "fuzz",
+      "title": "模糊测试与压力测试工具",
+      "description": "变异输入、协议测试与负载实验",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dirb": {
+      "group": "web",
+      "title": "网站路径扫描",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "dirbuster": {
+      "group": "web",
+      "title": "网站目录探测",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "dirsearch": {
+      "group": "web",
+      "title": "网站目录发现",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "dislocker": {
+      "group": "crypto",
+      "title": "加密与证书工具",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "distorm3": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dmitry": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dns2tcp": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dnscat2": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dnschef": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dnsenum": {
+      "group": "dns",
+      "title": "域名与 DNS 枚举",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "dnsgen": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dnsmap": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dnsrecon": {
+      "group": "dns",
+      "title": "DNS 信息查询",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "dnstracer": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dnstwist": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dnswalk": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dnsx": {
+      "group": "dns",
+      "title": "DNS 批量查询",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "donut-shellcode": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "doona": {
+      "group": "fuzz",
+      "title": "模糊测试与压力测试工具",
+      "description": "变异输入、协议测试与负载实验",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dos2unix": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dotdotpwn": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dploot": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dradis": {
+      "group": "report",
+      "title": "测试报告与协作",
+      "description": "笔记、报告、项目和测试发现管理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "driftnet": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dscan": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dsniff": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dufflebag": {
+      "group": "audit",
+      "title": "系统审计与防护工具",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dumpsterdiver": {
+      "group": "audit",
+      "title": "系统审计与防护工具",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dumpzilla": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "dvwa": {
+      "group": "lab",
+      "title": "Web 安全练习靶场",
+      "description": "本地练习靶场、课程和测试资料",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "dwarf2json": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "eaphammer": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "eapmd5pass": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "edb-debugger": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "eksctl": {
+      "group": "cloud",
+      "title": "云与容器安全工具",
+      "description": "云资源、容器、编排与供应链检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "email2phonenumber": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "emailharvester": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "enum4linux": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "enum4linux-ng": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "enumiax": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ethtool": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ettercap": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "evil-ssdp": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "evil-winrm": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "evil-winrm-py": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "evilginx2": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "exe2hexbat": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "exiflooter": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "exifprobe": {
+      "group": "stego",
+      "title": "隐写与媒体工具",
+      "description": "图片、音频、隐写和媒体元数据",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "exiv2": {
+      "group": "stego",
+      "title": "图片元数据查看",
+      "description": "图片、音频、隐写和媒体元数据",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "expect": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "exploitdb": {
+      "group": "exploit",
+      "title": "漏洞资料与样例索引",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "exploitdb-bin-sploits": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "exploitdb-papers": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ext3grep": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ext4magic": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "extundelete": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "eyewitness": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "faraday-agent-dispatcher": {
+      "group": "report",
+      "title": "报告与协作工具",
+      "description": "笔记、报告、项目和测试发现管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "faraday-cli": {
+      "group": "report",
+      "title": "报告与协作工具",
+      "description": "笔记、报告、项目和测试发现管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "fatcat": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "fcrackzip": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "fern-wifi-cracker": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "feroxbuster": {
+      "group": "web",
+      "title": "网站路径递归发现",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "ferret-sidejack": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ffuf": {
+      "group": "web",
+      "title": "网站路径与参数探测",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "fierce": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "fiked": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "finalrecon": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "findomain": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "firefox-developer-edition-kbx": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "firewalk": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "firmware-mod-kit": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "flashrom": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "fluxion": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "foremost": {
+      "group": "disk",
+      "title": "文件特征恢复",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "forensic-artifacts": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "forensics-colorize": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "fping": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "fragrouter": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "framework2": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "freeradius": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "freeradius-wpe": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "freerdp3": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ftester": {
+      "group": "fuzz",
+      "title": "模糊测试与压力测试工具",
+      "description": "变异输入、协议测试与负载实验",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "fwbuilder": {
+      "group": "audit",
+      "title": "系统审计与防护工具",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "galleta": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "gdb": {
+      "group": "reverse",
+      "title": "程序调试器",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "gdb-peda": {
+      "group": "reverse",
+      "title": "GDB 二进制分析增强",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "gdisk": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "gef": {
+      "group": "reverse",
+      "title": "GDB 调试增强",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "gemini-cli": {
+      "group": "automation",
+      "title": "自动化与外部助手工具",
+      "description": "自动化编排和第三方助手；平台本身不接入 AI",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "getallurls": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "getsploit": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ghidra": {
+      "group": "reverse",
+      "title": "反编译与逆向分析",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "git": {
+      "group": "dev",
+      "title": "版本管理",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "gitleaks": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "gitxray": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "glibc": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "gnuradio": {
+      "group": "radio",
+      "title": "软件无线电开发框架",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "gobuster": {
+      "group": "web",
+      "title": "目录与域名发现",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "godoh": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "golang-github-binject-go-donut": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "goldeneye": {
+      "group": "fuzz",
+      "title": "模糊测试与压力测试工具",
+      "description": "变异输入、协议测试与负载实验",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "goofile": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "google-nexus-tools": {
+      "group": "mobile",
+      "title": "安卓与移动分析工具",
+      "description": "APK、DEX、移动设备和应用分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "gophish": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "goshs": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "gospider": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "gowitness": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "gpart": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "gparted": {
+      "group": "disk",
+      "title": "图形化分区管理",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "gpp-decrypt": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "gqrx-sdr": {
+      "group": "radio",
+      "title": "图形化无线电接收",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "gr-air-modes": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "gr-iqbal": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "gr-osmosdr": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "graudit": {
+      "group": "audit",
+      "title": "系统审计与防护工具",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "grokevt": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "gsocket": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "gss-ntlmssp": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "gtkhash": {
+      "group": "crypto",
+      "title": "加密与证书工具",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "guymager": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "gvm": {
+      "group": "audit",
+      "title": "系统审计与防护工具",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "h8mail": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hackrf": {
+      "group": "radio",
+      "title": "软件无线电设备工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "hak5-wifi-coconut": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hakrawler": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hamster-sidejack": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hash-identifier": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hashcat": {
+      "group": "password",
+      "title": "密码哈希恢复",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "hashcat-utils": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hashdeep": {
+      "group": "crypto",
+      "title": "加密与证书工具",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hashid": {
+      "group": "password",
+      "title": "HashID 类型识别",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "hashrat": {
+      "group": "crypto",
+      "title": "加密与证书工具",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "havoc": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hb-honeypot": {
+      "group": "audit",
+      "title": "系统审计与防护工具",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hcxtools": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "heartleech": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hekatomb": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hexinject": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hexstrike-ai": {
+      "group": "automation",
+      "title": "自动化与外部助手工具",
+      "description": "自动化编排和第三方助手；平台本身不接入 AI",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hexwalk": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hivex": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hoaxshell": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "horst": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hostapd-mana": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hostapd-wpe": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hosthunter": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hostsman": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hotpatch": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hping3": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "htshells": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "httprint": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "httprobe": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "httpx-toolkit": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "httrack": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hubble": {
+      "group": "cloud",
+      "title": "云与容器安全工具",
+      "description": "云资源、容器、编排与供应链检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "humble": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hurl": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "hydra": {
+      "group": "password",
+      "title": "登录口令测试",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "hyperion": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "i2c-tools": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "iaxflood": {
+      "group": "fuzz",
+      "title": "模糊测试与压力测试工具",
+      "description": "变异输入、协议测试与负载实验",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ibombshell": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ident-user-enum": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ifenslave": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ike-scan": {
+      "group": "network",
+      "title": "IKE VPN 服务识别",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "imhex": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "impacket": {
+      "group": "ad",
+      "title": "网络与域协议工具集",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "impacket-scripts": {
+      "group": "ad",
+      "title": "网络与域协议脚本集",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "inetsim": {
+      "group": "audit",
+      "title": "系统审计与防护工具",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "inspectrum": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "inspy": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "instaloader": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "intrace": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "inviteflood": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "iodine": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ipv6toolkit": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "irpas": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ismtp": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "isr-evilgrade": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ivre": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "iw": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "jadx": {
+      "group": "mobile",
+      "title": "安卓反编译",
+      "description": "APK、DEX、移动设备和应用分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "javasnoop": {
+      "group": "mobile",
+      "title": "安卓与移动分析工具",
+      "description": "APK、DEX、移动设备和应用分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "jboss-autopwn": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "jd-gui": {
+      "group": "mobile",
+      "title": "安卓与移动分析工具",
+      "description": "APK、DEX、移动设备和应用分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "john": {
+      "group": "password",
+      "title": "密码恢复",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "johnny": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "joomscan": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "joplin": {
+      "group": "report",
+      "title": "笔记与资料管理",
+      "description": "笔记、报告、项目和测试发现管理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "jsp-file-browser": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "jsql": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "juice-shop": {
+      "group": "lab",
+      "title": "Web 安全练习平台",
+      "description": "本地练习靶场、课程和测试资料",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "kali-autopilot": {
+      "group": "lab",
+      "title": "练习靶场与课程工具",
+      "description": "本地练习靶场、课程和测试资料",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "kali-community-wallpapers": {
+      "group": "system",
+      "title": "社区壁纸资源",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "kali-defaults": {
+      "group": "system",
+      "title": "Kali 默认配置",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "kali-tweaks": {
+      "group": "system",
+      "title": "Kali 配置向导",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "kali-wallpapers": {
+      "group": "system",
+      "title": "Kali 壁纸资源",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "kalibrate-rtl": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "katana": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "kerberoast": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "kismet": {
+      "group": "wifi",
+      "title": "无线设备与网络分析",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "knocker": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "koadic": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "krbrelayx": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "kubernetes-helm": {
+      "group": "cloud",
+      "title": "云与容器安全工具",
+      "description": "云资源、容器、编排与供应链检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "kustomize": {
+      "group": "cloud",
+      "title": "云与容器安全工具",
+      "description": "云资源、容器、编排与供应链检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "lapsdumper": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "laudanum": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "lbd": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ldeep": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "legba": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "legion": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "libewf": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "libfindrtp": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "libimage-exiftool-perl": {
+      "group": "stego",
+      "title": "媒体与文档元数据查看",
+      "description": "图片、音频、隐写和媒体元数据",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "libpst": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "libsmali-java": {
+      "group": "mobile",
+      "title": "安卓与移动分析工具",
+      "description": "APK、DEX、移动设备和应用分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ligolo-mp": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ligolo-ng": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ligolo-ng-common-binaries": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "linkedin2username": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "linux-exploit-suggester": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "llm-tools-nmap": {
+      "group": "automation",
+      "title": "自动化与外部助手工具",
+      "description": "自动化编排和第三方助手；平台本身不接入 AI",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "llvm-defaults": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "lsof": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "lvm2": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "lynis": {
+      "group": "audit",
+      "title": "系统安全审计",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "mac-robber": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "macchanger": {
+      "group": "network",
+      "title": "网卡 MAC 地址管理",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "magicrescue": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "maltego": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "maltego-teeth": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "maryam": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "maskprocessor": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "masscan": {
+      "group": "network",
+      "title": "大规模端口发现",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "massdns": {
+      "group": "dns",
+      "title": "批量域名解析",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "mc": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "mcp-kali-server": {
+      "group": "automation",
+      "title": "自动化与外部助手工具",
+      "description": "自动化编排和第三方助手；平台本身不接入 AI",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "mdbtools": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "mdk3": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "mdk4": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "medusa": {
+      "group": "password",
+      "title": "并行登录口令测试",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "memdump": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "mercurial": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "merlin": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "merlin-agent": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "metacam": {
+      "group": "stego",
+      "title": "隐写与媒体工具",
+      "description": "图片、音频、隐写和媒体元数据",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "metagoofil": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "metasploit-framework": {
+      "group": "exploit",
+      "title": "漏洞研究与验证框架",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "metasploitmcp": {
+      "group": "automation",
+      "title": "自动化与外部助手工具",
+      "description": "自动化编排和第三方助手；平台本身不接入 AI",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "mimikatz": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "minicom": {
+      "group": "radio",
+      "title": "串口终端",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "miredo": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "missidentify": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "mitm6": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "mitmproxy": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "mongo-tools": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "msfpc": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "msitools": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "mssqlpwner": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "multiforcer": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "multimac": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "multimon-ng": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "mxcheck": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "myrescue": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "mysql-defaults": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "naabu": {
+      "group": "network",
+      "title": "端口发现",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "name-that-hash": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "nasm": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "nasty": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "nbtscan": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "nbtscan-unixwiz": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ncat-w32": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ncrack": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ncurses-hexedit": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "net-snmp": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "net-tools": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "netbase": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "netcat": {
+      "group": "remote",
+      "title": "网络连接与数据收发",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "netdiscover": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "netexec": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "netmask": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "netscanner": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "netsed": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "netsniff-ng": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "netw-ib-ox-ag": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "nextnet": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "nfs-utils": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ngrep": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "nikto": {
+      "group": "web",
+      "title": "Web 服务配置检查",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "nipper-ng": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "nishang": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "nmap": {
+      "group": "network",
+      "title": "端口扫描与服务识别",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "nmapsi4": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "nuclei": {
+      "group": "web",
+      "title": "模板化安全检查",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "obsidian": {
+      "group": "report",
+      "title": "本地知识库与笔记",
+      "description": "笔记、报告、项目和测试发现管理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "oclgausscrack": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "odat": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "offsec-courses": {
+      "group": "lab",
+      "title": "课程与练习资料",
+      "description": "本地练习靶场、课程和测试资料",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "ohrwurm": {
+      "group": "fuzz",
+      "title": "模糊测试与压力测试工具",
+      "description": "变异输入、协议测试与负载实验",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "oletools": {
+      "group": "forensics",
+      "title": "Office 文档与宏分析",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "ollydbg": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "onesixtyone": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "openocd": {
+      "group": "radio",
+      "title": "嵌入式调试接口",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "openssh": {
+      "group": "remote",
+      "title": "安全远程连接",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "openssh-ssh1": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "openssl": {
+      "group": "crypto",
+      "title": "加密、证书与密钥工具",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "opentaxii": {
+      "group": "audit",
+      "title": "系统审计与防护工具",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "openvpn": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ophcrack": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "oscanner": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "osrframework": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "owasp-mantra-ff": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "owl": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "p0f": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "pack": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "pack2": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "pacu": {
+      "group": "cloud",
+      "title": "云与容器安全工具",
+      "description": "云资源、容器、编排与供应链检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "padbuster": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "paros": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "parsero": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "parted": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "pasco": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "passdetective": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "passing-the-hash": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "patator": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "patchleaks": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "payloadsallthethings": {
+      "group": "exploit",
+      "title": "安全测试方法与样例资料",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "pdf-parser": {
+      "group": "forensics",
+      "title": "PDF 对象与脚本分析",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "pdfcrack": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "pdfid": {
+      "group": "forensics",
+      "title": "PDF 可疑特征识别",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "peass-ng": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "peirates": {
+      "group": "cloud",
+      "title": "云与容器安全工具",
+      "description": "云资源、容器、编排与供应链检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "penelope": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "perl-cisco-copyconfig": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "phishery": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "photon": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "php-defaults": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "phpggc": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "phpsploit": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "pipal": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "pixiewps": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "plaso": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "plocate": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "pnscan": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "pocsuite3": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "polenum": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "pompem": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "portspoof": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "poshc2": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "powercat": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "powershell": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "powershell-empire": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "powersploit": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "princeprocessor": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "procps": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "protos-sip": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "proxify": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "proximoth": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "proxmark3": {
+      "group": "radio",
+      "title": "RFID 读卡与协议研究",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "proxychains-ng": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "proxytunnel": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "pskracker": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "pspy": {
+      "group": "audit",
+      "title": "系统审计与防护工具",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ptunnel": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "pwnat": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "pwncat": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "pyinstaller": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "pyinstxtractor": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "python-defaults": {
+      "group": "dev",
+      "title": "Python 运行环境",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "python-faraday": {
+      "group": "report",
+      "title": "报告与协作工具",
+      "description": "笔记、报告、项目和测试发现管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "python-ldapdomaindump": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "python-pip": {
+      "group": "dev",
+      "title": "Python 软件包管理",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "python-pipx": {
+      "group": "dev",
+      "title": "Python 应用隔离安装",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "python-virtualenv": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "qemu": {
+      "group": "dev",
+      "title": "系统与架构模拟",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "qsreplace": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "qsslcaudit": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "quark-engine": {
+      "group": "mobile",
+      "title": "安卓与移动分析工具",
+      "description": "APK、DEX、移动设备和应用分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "radare2": {
+      "group": "reverse",
+      "title": "二进制逆向分析",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "rainbowcrack": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rake": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rarcrack": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "raven": {
+      "group": "web",
+      "title": "网站信息分析",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "rcracki-mt": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rdesktop": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "readpe": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "reaver": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rebind": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "recon-ng": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "reconspider": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "recordmydesktop": {
+      "group": "report",
+      "title": "报告与协作工具",
+      "description": "笔记、报告、项目和测试发现管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "recoverdm": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "recoverjpeg": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "redfang": {
+      "group": "bluetooth",
+      "title": "蓝牙安全工具",
+      "description": "蓝牙设备发现与协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "redsnarf": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "redsocks": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "reglookup": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "regripper": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rekono": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rephrase": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "requests": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "responder": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rev-proxy-grapher": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rfcat": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rfdump": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ridenum": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rifiuti": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rifiuti2": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rizin": {
+      "group": "reverse",
+      "title": "二进制分析框架",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "rizin-cutter": {
+      "group": "reverse",
+      "title": "图形化逆向工作台",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "rkhunter": {
+      "group": "audit",
+      "title": "系统可疑特征检查",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "rling": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "robotstxt": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ropper": {
+      "group": "reverse",
+      "title": "ROP 指令片段查找",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "routerkeygenpc": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "routersploit": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rsakeyfind": {
+      "group": "crypto",
+      "title": "加密与证书工具",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rsmangler": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rtpbreak": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rtpflood": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rtpinsertsound": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rtpmixsound": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rubeus": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ruby-pedump": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "rustscan": {
+      "group": "network",
+      "title": "快速端口发现",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "rz-ghidra": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "s3scanner": {
+      "group": "cloud",
+      "title": "云存储资源检查",
+      "description": "云资源、容器、编排与供应链检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "safecopy": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sakis3g": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "samba": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "samdump2": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sara": {
+      "group": "fuzz",
+      "title": "模糊测试与压力测试工具",
+      "description": "变异输入、协议测试与负载实验",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sbd": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "scalpel": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "scapy": {
+      "group": "network",
+      "title": "网络协议数据包工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "screen": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "scrounge-ntfs": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sctpscan": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sdrangel": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "seclists": {
+      "group": "password",
+      "title": "安全测试字典资料集",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "secure-socket-funneling": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sendemail": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sentrypeer": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "set": {
+      "group": "exploit",
+      "title": "社会工程测试框架",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "sfuzz": {
+      "group": "fuzz",
+      "title": "模糊测试与压力测试工具",
+      "description": "变异输入、协议测试与负载实验",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sharphound": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sharpshooter": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "shed": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "shell-gpt": {
+      "group": "automation",
+      "title": "自动化与外部助手工具",
+      "description": "自动化编排和第三方助手；平台本身不接入 AI",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "shellfire": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "shellnoob": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "shellter": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sherlock": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sickle-pdk": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sidguesser": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "siege": {
+      "group": "fuzz",
+      "title": "模糊测试与压力测试工具",
+      "description": "变异输入、协议测试与负载实验",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sigma-cli": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "silenttrinity": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "siparmyknife": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sipcrack": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sipp": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sippts": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sipsak": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sipvicious": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "skipfish": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sleuthkit": {
+      "group": "forensics",
+      "title": "文件系统取证套件",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "slimtoolkit": {
+      "group": "cloud",
+      "title": "云与容器安全工具",
+      "description": "云资源、容器、编排与供应链检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sliver": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "slowhttptest": {
+      "group": "fuzz",
+      "title": "模糊测试与压力测试工具",
+      "description": "变异输入、协议测试与负载实验",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "smbmap": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "smtp-user-enum": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sn0int": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "snaffler-ng": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sniffjoke": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "snmpcheck": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "snmpenum": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "snort": {
+      "group": "audit",
+      "title": "系统审计与防护工具",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "snowdrop": {
+      "group": "stego",
+      "title": "隐写与媒体工具",
+      "description": "图片、音频、隐写和媒体元数据",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "socat": {
+      "group": "remote",
+      "title": "连接转发与数据中继",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "sparrow-wifi": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "spiderfoot": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "spike": {
+      "group": "fuzz",
+      "title": "模糊测试与压力测试工具",
+      "description": "变异输入、协议测试与负载实验",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "spire": {
+      "group": "cloud",
+      "title": "云与容器安全工具",
+      "description": "云资源、容器、编排与供应链检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sploitscan": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "spooftooph": {
+      "group": "bluetooth",
+      "title": "蓝牙安全工具",
+      "description": "蓝牙设备发现与协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "spray": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sprayhound": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sprayingtoolkit": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "spraykatz": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sqldict": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sqlitebrowser": {
+      "group": "system",
+      "title": "SQLite 图形管理",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "sqlmap": {
+      "group": "web",
+      "title": "SQL 注入检测",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "sqlmc": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sqlninja": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sqlsus": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ssdeep": {
+      "group": "reverse",
+      "title": "逆向与二进制工具",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sshuttle": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ssldump": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sslh": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sslscan": {
+      "group": "crypto",
+      "title": "TLS 协议与证书检查",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "sslsniff": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sslsplit": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sslstrip": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sslyze": {
+      "group": "crypto",
+      "title": "加密与证书工具",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sstimap": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "starkiller": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "statsprocessor": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "stegcracker": {
+      "group": "stego",
+      "title": "隐写口令字典恢复",
+      "description": "图片、音频、隐写和媒体元数据",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "steghide": {
+      "group": "stego",
+      "title": "文件隐写提取",
+      "description": "图片、音频、隐写和媒体元数据",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "stegosuite": {
+      "group": "stego",
+      "title": "图形化隐写工具",
+      "description": "图片、音频、隐写和媒体元数据",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "stegsnow": {
+      "group": "stego",
+      "title": "文本空白隐写",
+      "description": "图片、音频、隐写和媒体元数据",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "stunnel": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "subfinder": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "subjack": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sublist3r": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "subversion": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sucrack": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "sudo": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "swaks": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "syft": {
+      "group": "cloud",
+      "title": "云与容器安全工具",
+      "description": "云资源、容器、编排与供应链检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "t50": {
+      "group": "fuzz",
+      "title": "模糊测试与压力测试工具",
+      "description": "变异输入、协议测试与负载实验",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tailscale": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tcpdump": {
+      "group": "network",
+      "title": "网络抓包",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "tcpflow": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tcpick": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tcpreplay": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "teamsploit": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "termineter": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "terraform": {
+      "group": "cloud",
+      "title": "云基础设施管理",
+      "description": "云资源、容器、编排与供应链检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "testdisk": {
+      "group": "disk",
+      "title": "分区与数据恢复",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "testssl.sh": {
+      "group": "crypto",
+      "title": "TLS 安全配置检查",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "tetragon": {
+      "group": "cloud",
+      "title": "云与容器安全工具",
+      "description": "云资源、容器、编排与供应链检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tftp-hpa": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tftpd32": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "thc-ipv6": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "thc-pptp-bruter": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "thc-ssl-dos": {
+      "group": "fuzz",
+      "title": "模糊测试与压力测试工具",
+      "description": "变异输入、协议测试与负载实验",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "theharvester": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tiger": {
+      "group": "audit",
+      "title": "系统审计与防护工具",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tightvnc": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tinja": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tlssled": {
+      "group": "crypto",
+      "title": "加密与证书工具",
+      "description": "加密、密钥、证书和 TLS 检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tmux": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tnftp": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tnscmd10g": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tookie-osint": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "top-100": {
+      "group": "system",
+      "title": "官方常用工具导航页",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "traceroute": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tree": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "trivy": {
+      "group": "cloud",
+      "title": "依赖与容器漏洞检查",
+      "description": "云资源、容器、编排与供应链检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "truecrack": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "trufflehog": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tundeep": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "twofi": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "tzdata": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "ubertooth": {
+      "group": "bluetooth",
+      "title": "蓝牙安全工具",
+      "description": "蓝牙设备发现与协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "udptunnel": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "uhd": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "uhd-images": {
+      "group": "radio",
+      "title": "射频与硬件工具",
+      "description": "软件无线电、RFID、串口和硬件调试",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "unar": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "unblob": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "undbx": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "unhide": {
+      "group": "audit",
+      "title": "系统审计与防护工具",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "unhide.rb": {
+      "group": "audit",
+      "title": "系统审计与防护工具",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "unicorn-magic": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "unicornscan": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "uniscan": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "unix-privesc-check": {
+      "group": "audit",
+      "title": "系统审计与防护工具",
+      "description": "配置审计、恶意特征检测和防护",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "unrar-nonfree": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "upx-ucl": {
+      "group": "reverse",
+      "title": "可执行文件压缩与壳检查",
+      "description": "反汇编、调试、反编译和二进制分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "urlcrazy": {
+      "group": "dns",
+      "title": "域名与公开情报工具",
+      "description": "域名、子域名、公开账号与资产线索",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "uro": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "util-linux": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "vboot-utils": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "veil": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "villain": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "vim": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "vinetto": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "vlan": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "voiphopper": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "vopono": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "vpnc": {
+      "group": "proxy",
+      "title": "代理与隧道工具",
+      "description": "流量代理、转发、VPN 和协议隧道",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "vwifi-dkms": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "wafw00f": {
+      "group": "web",
+      "title": "网站防护特征识别",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "wapiti": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "watobo": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "waybackpy": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "wce": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "web-cache-vulnerability-scanner": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "webacoo": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "webscarab": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "webshells": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "websploit": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "weevely": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "wfuzz": {
+      "group": "web",
+      "title": "Web 参数与内容探测",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "wget": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "wgetpaste": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "what-is-python": {
+      "group": "dev",
+      "title": "开发与运行环境工具",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "whatmask": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "whatweb": {
+      "group": "web",
+      "title": "网站技术识别",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "whois": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "wifi-honey": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "wifiphisher": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "wifipumpkin3": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "wifite": {
+      "group": "wifi",
+      "title": "无线测试流程工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "wig": {
+      "group": "web",
+      "title": "网站信息识别",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "wig-ng": {
+      "group": "web",
+      "title": "网站信息收集",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "windows-binaries": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "windows-privesc-check": {
+      "group": "exploit",
+      "title": "漏洞研究与验证工具",
+      "description": "漏洞资料、验证框架与研究工具",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "winregfs": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "wireshark": {
+      "group": "network",
+      "title": "网络数据包分析",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "witnessme": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "wmi": {
+      "group": "ad",
+      "title": "内网与域安全工具",
+      "description": "Windows 域、权限、身份和内网协议",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "wordlistraider": {
+      "group": "password",
+      "title": "密码恢复与字典工具",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "wordlists": {
+      "group": "password",
+      "title": "通用字典资料",
+      "description": "哈希识别、密码恢复和字典处理",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "wotmate": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "wpa-sycophant": {
+      "group": "wifi",
+      "title": "无线网络安全工具",
+      "description": "Wi-Fi 接入点、认证和无线数据包",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "wpprobe": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "wpscan": {
+      "group": "web",
+      "title": "WordPress 安全检查",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "wsgidav": {
+      "group": "remote",
+      "title": "远程连接与管理工具",
+      "description": "远程终端、文件传输和会话管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "xclip": {
+      "group": "system",
+      "title": "系统与辅助组件工具",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "xmount": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "xplico": {
+      "group": "forensics",
+      "title": "取证与日志工具",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "xspy": {
+      "group": "stego",
+      "title": "隐写与媒体工具",
+      "description": "图片、音频、隐写和媒体元数据",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "xsrfprobe": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "xsser": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "xsstrike": {
+      "group": "web",
+      "title": "网站与接口安全工具",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "yara": {
+      "group": "forensics",
+      "title": "文件特征规则匹配",
+      "description": "内存、日志、文档、注册表和事件分析",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "yersinia": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "zaproxy": {
+      "group": "web",
+      "title": "网站代理与安全测试",
+      "description": "网站技术识别、接口与目录探测、Web 漏洞检查",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "zeditor": {
+      "group": "dev",
+      "title": "代码编辑器",
+      "description": "编程语言、编译器、分析库和开发环境",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "zerofree": {
+      "group": "disk",
+      "title": "磁盘与文件恢复工具",
+      "description": "镜像、分区、文件系统和数据恢复",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "zim": {
+      "group": "report",
+      "title": "报告与协作工具",
+      "description": "笔记、报告、项目和测试发现管理",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "zonedb": {
+      "group": "network",
+      "title": "网络发现与协议工具",
+      "description": "主机发现、端口、网络服务和协议分析",
+      "basis": "明确工具分组",
+      "specific_title": false
+    },
+    "zsh": {
+      "group": "system",
+      "title": "命令解释器",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "zsh-autosuggestions": {
+      "group": "system",
+      "title": "命令输入建议扩展",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": true
+    },
+    "zsh-syntax-highlighting": {
+      "group": "system",
+      "title": "命令语法高亮扩展",
+      "description": "系统命令、依赖库、桌面和辅助组件",
+      "basis": "明确工具分组",
+      "specific_title": true
+    }
+  },
+  "options": {
+    "help": "帮助说明",
+    "version": "版本信息",
+    "verbose": "详细输出",
+    "quiet": "精简输出",
+    "debug": "调试信息",
+    "target": "目标地址",
+    "targets": "目标列表",
+    "host": "主机地址",
+    "hostname": "主机名称",
+    "url": "目标网址",
+    "uri": "目标地址",
+    "port": "端口",
+    "ports": "端口范围",
+    "file": "文件",
+    "input": "输入",
+    "output": "输出",
+    "outfile": "输出文件",
+    "outdir": "输出目录",
+    "directory": "目录",
+    "dir": "目录",
+    "path": "路径",
+    "wordlist": "字典文件",
+    "dictionary": "字典",
+    "password": "密码",
+    "passwd": "密码",
+    "username": "用户名",
+    "user": "用户",
+    "threads": "线程数",
+    "thread": "线程",
+    "timeout": "超时秒数",
+    "delay": "等待间隔",
+    "proxy": "代理",
+    "config": "配置文件",
+    "interface": "网络接口",
+    "iface": "网络接口",
+    "format": "格式",
+    "type": "类型",
+    "mode": "模式",
+    "method": "方法",
+    "filter": "过滤规则",
+    "count": "数量",
+    "limit": "上限",
+    "depth": "层级",
+    "recursive": "递归处理",
+    "retries": "重试次数",
+    "retry": "重试",
+    "rate": "速率",
+    "scan": "扫描",
+    "list": "列出",
+    "show": "显示",
+    "save": "保存",
+    "read": "读取",
+    "write": "写入",
+    "enable": "启用",
+    "disable": "禁用",
+    "no": "不使用",
+    "with": "启用",
+    "without": "不使用",
+    "color": "颜色",
+    "address": "地址",
+    "network": "网络",
+    "ssl": "SSL",
+    "tls": "TLS",
+    "cert": "证书",
+    "certificate": "证书",
+    "key": "密钥",
+    "hash": "哈希",
+    "encrypt": "加密",
+    "decrypt": "解密",
+    "server": "服务端",
+    "client": "客户端",
+    "listen": "监听",
+    "bind": "绑定",
+    "source": "来源",
+    "destination": "目的地址",
+    "session": "会话",
+    "command": "工具内命令",
+    "exec": "执行",
+    "exclude": "排除",
+    "include": "包含",
+    "force": "强制",
+    "request": "请求",
+    "response": "响应",
+    "header": "请求头",
+    "cookie": "Cookie",
+    "data": "数据",
+    "log": "日志",
+    "report": "报告",
+    "json": "JSON",
+    "xml": "XML",
+    "csv": "CSV",
+    "http": "HTTP",
+    "https": "HTTPS",
+    "tcp": "TCP",
+    "udp": "UDP",
+    "dns": "DNS",
+    "domain": "域名",
+    "domains": "域名列表",
+    "usernames": "用户名列表",
+    "passwords": "密码列表",
+    "token": "令牌",
+    "secret": "密钥",
+    "auth": "身份认证",
+    "authentication": "身份认证",
+    "capture": "抓取",
+    "pcap": "抓包文件",
+    "pcapng": "抓包文件",
+    "device": "设备",
+    "mac": "MAC 地址",
+    "bssid": "接入点地址",
+    "ssid": "无线网络名称",
+    "channel": "信道",
+    "channels": "信道列表",
+    "interval": "间隔",
+    "max": "最大",
+    "min": "最小",
+    "size": "大小",
+    "length": "长度",
+    "time": "时间",
+    "parallel": "并行",
+    "parallelism": "并行数",
+    "batch": "批处理",
+    "interactive": "交互",
+    "silent": "静默",
+    "status": "状态",
+    "follow": "跟随",
+    "redirects": "重定向",
+    "allow": "允许",
+    "deny": "拒绝",
+    "resume": "继续",
+    "restore": "恢复",
+    "test": "测试",
+    "check": "检查",
+    "verify": "校验",
+    "extract": "提取",
+    "attack": "测试方式",
+    "level": "级别",
+    "risk": "风险级别",
+    "number": "数量",
+    "num": "数量",
+    "text": "文本",
+    "string": "文本",
+    "binary": "二进制",
+    "ascii": "ASCII",
+    "hex": "十六进制",
+    "encoding": "编码",
+    "charset": "字符集",
+    "pattern": "匹配模式",
+    "regex": "正则表达式"
+  },
+  "phrases": {
+    "show this help": "显示帮助说明",
+    "help message": "显示帮助说明",
+    "version information": "显示版本信息",
+    "output file": "输出文件",
+    "input file": "输入文件",
+    "wordlist": "字典文件",
+    "number of threads": "线程数量",
+    "timeout": "超时设置",
+    "verbose": "详细输出",
+    "password": "密码设置",
+    "username": "用户名设置",
+    "interface": "网络接口设置"
+  }
+}

@@ -1,0 +1,231 @@
+[
+  {
+    "id": "start",
+    "group": "先试一次",
+    "name": "我完全不会，先做一个演示",
+    "tool": "decode",
+    "prepare": "不需要文件，也不用安装第三方工具。",
+    "action": "平台会填好一段示例编码，你只需要点击“一键执行”。",
+    "result": "在结果文字中找到 flag{hello_ctf_deck}，然后尝试下载 result.txt。",
+    "defaults": {
+      "text": "ZmxhZ3toZWxsb19jdGZfZGVja30=",
+      "mode": "base64-decode"
+    }
+  },
+  {
+    "id": "unknown",
+    "group": "分析题目文件",
+    "name": "我有文件，但不知道用什么工具",
+    "tool": "identify",
+    "prepare": "准备题目附件。",
+    "action": "选择文件，执行后查看文件格式线索和下一步建议。",
+    "result": "这一步不会解题。根据识别出的图片、抓包、文档或程序类型，再回到新手模式选对应任务。"
+  },
+  {
+    "id": "image",
+    "group": "分析题目文件",
+    "name": "查看图片或文档里的隐藏提示",
+    "tool": "exiftool",
+    "prepare": "准备图片、音频或文档文件。",
+    "action": "选择文件即可，不需要知道命令参数。",
+    "result": "重点看 Comment、Description、Author 等字段。它们可能含提示，也可能没有有用内容。"
+  },
+  {
+    "id": "zip",
+    "group": "分析题目文件",
+    "name": "看看压缩包里面有什么",
+    "tool": "zipinspect",
+    "prepare": "准备 ZIP 文件；这项功能内置可用。",
+    "action": "选择文件，查看内部名称、大小与加密标记，不会自动解压。",
+    "result": "文件名和目录可能提供线索；加密标记不等于一定存在伪加密。"
+  },
+  {
+    "id": "flags",
+    "group": "分析题目文件",
+    "name": "从文本或日志里找 Flag",
+    "tool": "flags",
+    "prepare": "准备日志或文本文件，知道 Flag 前缀，例如 flag 或 ctf。",
+    "action": "选择文件并填写前缀。",
+    "result": "查看 flags.txt。结果会去重，没有找到时先核对前缀、大小写和文件是否是文本。"
+  },
+  {
+    "id": "strings",
+    "group": "分析题目文件",
+    "name": "从二进制文件里找可读文字",
+    "tool": "strings",
+    "prepare": "准备题目文件。",
+    "action": "选择文件，查看可读字符串。",
+    "result": "留意路径、网址、错误提示和密码线索；输出文本不代表程序会被执行。"
+  },
+  {
+    "id": "pdf",
+    "group": "分析题目文件",
+    "name": "把 PDF 里面的文字提取出来",
+    "tool": "pdftotext",
+    "prepare": "准备 PDF 文件。",
+    "action": "上传 PDF 并执行。",
+    "result": "下载 document.txt。扫描图片型 PDF 可能没有可搜索文本，这项功能不做图片文字识别。"
+  },
+  {
+    "id": "decode",
+    "group": "编码与密码",
+    "name": "把 Base64、十六进制或网址编码还原",
+    "tool": "decode",
+    "prepare": "准备题目中的编码文本，并尽量确认编码类型。",
+    "action": "粘贴文本，选择对应的解码方式。",
+    "result": "查看还原文字或下载 decoded.bin；出现乱码时先检查编码类型，不能据此判断已解密成功。"
+  },
+  {
+    "id": "caesar",
+    "group": "编码与密码",
+    "name": "尝试凯撒字母偏移",
+    "tool": "caesar",
+    "prepare": "准备由字母构成的待分析文本。",
+    "action": "粘贴文本，执行后得到26种偏移。",
+    "result": "逐行寻找能读懂的句子或 Flag，不需要自己填写密钥。"
+  },
+  {
+    "id": "hash",
+    "group": "编码与密码",
+    "name": "计算文件指纹，确认是不是同一个文件",
+    "tool": "digest",
+    "prepare": "准备需要比对的文件。",
+    "action": "选择文件，计算 MD5、SHA-1 和 SHA-256。",
+    "result": "相同算法的指纹完全一致表示内容高度可能相同。这是比对，不是密码破解。"
+  },
+  {
+    "id": "pcap",
+    "group": "查看网络流量",
+    "name": "看抓包里主要有哪些协议",
+    "tool": "tshark",
+    "prepare": "准备 PCAP 或 PCAPNG 抓包文件。",
+    "action": "选择抓包文件，先看协议分布和 TCP 会话。",
+    "result": "找到 HTTP 等协议后，再选“查看抓包里的网页请求”。不确定时可打开 Wireshark 进一步查看。"
+  },
+  {
+    "id": "httpflow",
+    "group": "查看网络流量",
+    "name": "查看抓包里的网页请求",
+    "tool": "httpflows",
+    "prepare": "准备包含 HTTP 请求的抓包文件。",
+    "action": "选择文件并执行。",
+    "result": "查看来源IP、主机名和请求路径。HTTPS加密流量通常不能用这一步直接读出请求正文。"
+  },
+  {
+    "id": "web",
+    "group": "检查比赛网页",
+    "name": "先确认比赛网页是否在线",
+    "tool": "http",
+    "prepare": "准备题目给出的完整 HTTP 或 HTTPS 网址。",
+    "action": "粘贴网址，查看状态、响应头与正文。",
+    "result": "200一般表示请求成功，403表示拒绝访问，404表示路径不存在。连接失败时先确认靶场已启动、网址和网络正确。"
+  },
+  {
+    "id": "fingerprint",
+    "group": "检查比赛网页",
+    "name": "识别网站使用的技术",
+    "tool": "whatweb",
+    "prepare": "准备比赛靶场的完整网址。",
+    "action": "填入网址并运行技术识别。",
+    "result": "服务器和技术标签只是后续分析线索，不是已经发现漏洞的结论。"
+  },
+  {
+    "id": "elf",
+    "group": "分析程序",
+    "name": "静态查看 Linux 程序结构",
+    "tool": "elf",
+    "prepare": "准备 ELF 题目文件。",
+    "action": "选择文件，查看架构、节区和符号信息。",
+    "result": "先确认32/64位与目标架构，再决定使用什么调试环境；此任务不会执行题目程序。"
+  },
+  {
+    "id": "protect",
+    "group": "分析程序",
+    "name": "查看程序开启了哪些保护",
+    "tool": "checksec",
+    "prepare": "准备需要分析的程序文件。",
+    "action": "选择文件并执行保护检查。",
+    "result": "关注 NX、PIE、Canary、RELRO 等标记，它们帮助选择后续分析方法，不直接给出解题结果。"
+  },
+  {
+    "id": "backup",
+    "group": "保护自己的源码",
+    "name": "修改源码前先备份",
+    "tool": "backup",
+    "prepare": "准备 Kali 本机上的源码目录。",
+    "action": "通过浏览目录选择文件夹，生成 ZIP 备份。",
+    "result": "下载 backup.zip 保存好，再修改源码。平台不会自动把备份恢复到原目录。"
+  },
+  {
+    "id": "baseline",
+    "group": "保护自己的源码",
+    "name": "记录当前源码文件基线",
+    "tool": "baseline",
+    "prepare": "准备自己的源码目录。",
+    "action": "浏览并选择目录，生成每个文件的指纹。",
+    "result": "下载 baseline.json 保存，后续用它对比修改。基线只记录指纹，不是源码备份。"
+  },
+  {
+    "id": "changes",
+    "group": "保护自己的源码",
+    "name": "检查源码哪些文件变了",
+    "tool": "compare",
+    "prepare": "准备源码目录，以及先前保存的 baseline.json。",
+    "action": "选择目录并上传基线文件。",
+    "result": "查看新增、删除和修改的文件列表；这表示内容变化，并不自动判断是不是攻击。"
+  },
+  {
+    "id": "rsa",
+    "group": "GitHub 解题工具",
+    "name": "题目给了 RSA 公钥，尝试恢复私钥",
+    "tool": "rsa-private",
+    "prepare": "准备 PEM 格式 RSA 公钥；这项适用于存在弱点的 RSA 题。",
+    "action": "选择公钥文件，未安装时先点击安装，再执行私钥恢复。",
+    "result": "看日志里的因数和私钥。没有恢复不代表安装失败；部分攻击需要 SageMath，部分会联网查询 FactorDB。"
+  },
+  {
+    "id": "xor-length",
+    "group": "GitHub 解题工具",
+    "name": "分析重复 XOR 的密钥长度",
+    "tool": "xortool-length",
+    "prepare": "准备原始二进制密文；如果题目给的是十六进制文本，先做十六进制解码。",
+    "action": "上传密文字节文件，查看可能密钥长度，再尝试“xortool 明文候选”。",
+    "result": "长度与置信度只是统计线索；候选是否正确还要结合题目与文件结构判断。"
+  },
+  {
+    "id": "zip-known",
+    "group": "GitHub 解题工具",
+    "name": "用已知文件分析 ZIP 加密",
+    "tool": "bkcrack-known",
+    "prepare": "准备 ZipCrypto 加密 ZIP 与对应明文 ZIP，知道两边内部条目名。",
+    "action": "先用 ZIP 加密类型检查查看名称，再选择两份 ZIP，填写精确条目名。",
+    "result": "日志命中时得到3个内部密钥，不一定是原密码。不适用于 AES ZIP；需至少12字节已知明文且压缩数据相匹配。"
+  },
+  {
+    "id": "memory",
+    "group": "GitHub 解题工具",
+    "name": "从 Windows 内存镜像里查看进程",
+    "tool": "vol-pslist",
+    "prepare": "准备 Windows 内存镜像；较大的镜像填写 Kali 绝对路径。",
+    "action": "先在 GitHub 精选里运行 Volatility 系统信息，再选择进程列表任务。首次可能联网获取符号。",
+    "result": "查看 PID、父进程、名字和时间，结合题目找线索。缺符号或系统不匹配会在日志报错，不能靠此一步直接定位 Flag。"
+  },
+  {
+    "id": "office",
+    "group": "GitHub 解题工具",
+    "name": "查看 Office 文档里的 VBA 宏",
+    "tool": "olevba",
+    "prepare": "准备题目文档，不需要启用宏或打开 Office。",
+    "action": "选择文档，运行静态宏提取与特征分析。",
+    "result": "重点看 VBA 源码、自动执行标记、字符串和网址。平台不执行宏；可疑标签不是恶意结论。"
+  },
+  {
+    "id": "symbolic",
+    "group": "GitHub 解题工具",
+    "name": "进阶：寻找能到成功分支的程序输入",
+    "tool": "angr-find",
+    "prepare": "准备 ELF，并通过逆向确定成功地址、可选失败地址和固定输入长度。",
+    "action": "填写 angr 映射后的虚拟地址及1～256字节长度。PIE 地址要考虑基址；默认只搜索可打印字符。",
+    "result": "命中后下载 candidate.bin 和 candidate.json。只返回所建模型的候选；超时、状态限制或模拟错误都不代表题目无解。"
+  }
+]

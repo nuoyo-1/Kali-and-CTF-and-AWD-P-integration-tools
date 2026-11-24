@@ -1,0 +1,16 @@
+__pycache__/
+data/
+*.zip
+.venv/
+dist/
+review/
+node_modules/
+*.py[cod]
+*.part
+*.gem
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.log

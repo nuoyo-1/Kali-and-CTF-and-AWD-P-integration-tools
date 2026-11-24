@@ -1,0 +1,10 @@
+CTF Deck 演示资料，全部为本地测试内容。
+用“Flag 提取与去重”上传本文件，前缀填写 flag。
+预期结果：两条不同的 Flag。
+flag{hello_ctf_deck}
+flag{local_test_only}
+flag{hello_ctf_deck}
+
+用“常见编码转换”选择 base64-decode 并粘贴下一行：
+ZmxhZ3toZWxsb19jdGZfZGVja30=
+预期结果：flag{hello_ctf_deck}

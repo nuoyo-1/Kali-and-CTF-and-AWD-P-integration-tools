@@ -1,0 +1,15 @@
+{
+  "collected": "2026-11-23T03:24:48.173578+00:00",
+  "outguess": {
+    "repo": "resurrecting-open-source-projects/outguess",
+    "commit": "24810e14327c2bbeedeaadd3e24491f2a4425c02",
+    "file": "outguess-source.zip",
+    "sha256": "763c13d55af5cb9789e5ab680419fbfcd7dd2f7b2dadba29ae4050e3235ae5c4"
+  },
+  "zsteg": {
+    "version": "0.2.14",
+    "source": "https://rubygems.org/downloads/zsteg-0.2.14.gem",
+    "file": "zsteg.gem",
+    "sha256": "761ee35a8512630606946187ed1a3150c6ab30dd5e32cefe48ebb2b874190f6f"
+  }
+}
