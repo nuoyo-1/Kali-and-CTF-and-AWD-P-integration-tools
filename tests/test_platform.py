@@ -12,7 +12,7 @@ import tempfile
 import threading
 import time
 import unittest
-from unittest.mock import patch
+from unittest.mock import patch, MagicMock
 from types import SimpleNamespace
 import zipfile
 from urllib.parse import quote
@@ -247,6 +247,21 @@ class JobLifecycleTests(unittest.TestCase):
         result=self.wait_terminal(job['id'])
         self.assertEqual(result['status'],'timeout')
         self.assertIn('started',result['log'])
+    def test_result_disappearing_during_listing_does_not_break_status(self):
+        with self.manager.lock:
+            job=self.manager.submit('_test_sleep',{})
+            self.manager.stop(job['id'])
+        vanished=MagicMock()
+        vanished.name='vanished.bin'
+        vanished.is_file.return_value=True
+        vanished.is_symlink.return_value=False
+        vanished.resolve.return_value=(JOBS/job['id']/'vanished.bin').resolve()
+        vanished.relative_to.return_value=Path('vanished.bin')
+        vanished.stat.side_effect=FileNotFoundError('tool renamed the result')
+        with patch.object(Path,'rglob',return_value=iter([vanished])):
+            result=self.manager.detail(job['id'])
+        self.assertEqual(result['files'],[])
+        self.assertEqual(result['status'],'cancelled')
     def test_cancelled_queued_job_does_not_start(self):
         with self.manager.lock:
             job=self.manager.submit('_test_sleep',{})

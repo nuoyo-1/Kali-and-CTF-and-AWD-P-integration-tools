@@ -220,5 +220,15 @@ class JobManager:
                 result['log'] = f.read().decode('utf-8','replace')
         else:
             result['log'] = ''
-        result['files'] = [dict(name=str(p.relative_to(out)).replace('\\','/'), size=p.stat().st_size) for p in out.rglob('*') if p.is_file() and not p.is_symlink() and p.name not in ('_input.json', 'job.json') and p.resolve().is_relative_to(out.resolve())][:500]
+        result['files'] = []
+        root=out.resolve()
+        for p in out.rglob('*'):
+            if p.name in ('_input.json','job.json','job.tmp'):continue
+            try:
+                if p.is_file() and not p.is_symlink() and p.resolve().is_relative_to(root):
+                    result['files'].append(dict(name=str(p.relative_to(out)).replace('\\','/'),size=p.stat().st_size))
+            except OSError:
+                # A running tool can rename/remove a file between enumeration and stat.
+                continue
+            if len(result['files'])>=500:break
         return result
